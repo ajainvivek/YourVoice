@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab title="Trending">
+		<Window title="Trending">
+			<Label>This is a trending tab.</Label>
+		</Window>
+	</Tab>
+</Alloy>

@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab title="Recent">
+		<Window title="Recent">
+			<Label>This is a recent tab.</Label>
+		</Window>
+	</Tab>
+</Alloy>

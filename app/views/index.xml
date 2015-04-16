@@ -1,0 +1,8 @@
+<Alloy>
+	<TabGroup id="tabGroup" onOpen="doOpen">
+		<!-- Require Tabs -->
+		<Require id="recentController" src="recent"></Require>
+		<Require id="trendingController" src="trending"></Require>
+		<Require id="myvoiceController" src="myvoice"></Require>
+	</TabGroup>
+</Alloy>

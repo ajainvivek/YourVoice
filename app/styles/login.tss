@@ -1,0 +1,156 @@
+// login.tss
+
+//Home Screen Styles
+'#homeView' : {
+	visible : true,
+	top : '90dp',
+	layout: 'vertical',
+	backgroundColor : 'transparent'
+},
+
+'#hvButtonContainer' : {
+	top:'20dp',
+	width:'150',
+	height:Ti.UI.SIZE,
+	layout: 'vertical'
+},
+
+'#logoText' :{
+	text : "Welcome - YourVoice",
+	font:{
+		fontSize:'24dp',
+		fontWeight : 'bold'
+	}
+},
+
+//Login Screen Styles
+'#loginView' : {
+	visible : false,
+	width:Ti.UI.SIZE,
+	height:Ti.UI.SIZE,
+	top : '90dp',
+	layout:'vertical',
+	borderColor :'transparent'
+},
+
+'#loginText' :{
+	text : "Login - YourVoice",
+	font:{
+		fontSize:'24dp',
+		fontWeight : 'bold'
+	}
+},
+
+'#lvContainer' : {
+	top:'20dp',
+	width:'280dp',
+	height:Ti.UI.SIZE,
+	layout:'vertical',
+	borderColor :'orange',
+	borderWidth :0
+},
+
+//Register Screen Styles
+// General Styles
+'.tfWrapper': {
+	top: '6dp',
+	width: '260dp',
+	height: '40dp',
+	border: 1,
+	borderColor: 'gray'
+},
+
+'.centerHelper': {
+	top: '10dp',
+	height: Ti.UI.SIZE,
+	width: Ti.UI.SIZE,
+	layout: 'horizontal'
+},
+
+ScrollView: {
+	contentHeight: Ti.UI.SIZE,
+	contentWidth: Ti.UI.SIZE
+},
+
+TextField: {
+	autocapitalization: Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_NONE,
+	autocorrect: false,
+	top: '2dp',
+	left: '4dp',
+	bottom: '2dp',
+	right: '4dp',
+	paddingLeft: '4dp',
+	backgroundColor: 'white',
+	color : 'black',
+},
+
+// Default Button Style
+"Button" : {
+	top: '6dp',
+	width: '120dp',
+	height: '36dp',
+	font:{
+		fontSize: '13dp'
+	}
+},
+
+'#registerView' : {
+	visible: false,
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	top: '90dp',
+	layout: 'vertical',
+	backgroundColor: 'transparent'
+},
+
+'#registerText' :{
+	text: "Register - YourVoice",
+	font:{
+		fontSize: '24dp',
+		fontWeight: 'bold'
+	}
+},
+
+
+'#cavContainer' : {
+	top: '20dp',
+	width: '280dp',
+	height: Ti.UI.SIZE,
+	layout: 'vertical',
+},
+
+
+'#acct_fname' : {
+	hintText: 'first name'
+},
+
+'#acct_lname' : {
+	hintText: 'last name'
+},
+
+'#acct_username' : {
+	hintText: 'username'
+},
+
+'#acct_email' : {
+	hintText: 'email address'
+},
+
+'#acct_password' : {
+	passwordMask: true,
+	hintText: 'password'
+},
+
+'#acct_password_confirmation' : {
+	passwordMask: true,
+	hintText: 'password confirmation'
+},
+
+'#cancelRegisterBtn': {
+	left: '10dp'
+},
+
+'#doRegisterBtn': {
+	left: '0dp'
+}

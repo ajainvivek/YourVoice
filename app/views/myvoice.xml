@@ -1,0 +1,7 @@
+<Alloy>
+	<Tab title="My Voice">
+		<Window title="My Voice">
+			<Label>This is a my voice tab.</Label>
+		</Window>
+	</Tab>
+</Alloy>
