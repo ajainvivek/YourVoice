@@ -69,7 +69,7 @@ function doRegisterBtnClicked() {
 };
 
 /**
-* @desc: login into the application
+* @desc: login into the application with response 
 */
 function userActionResponseHandler(_resp) {
 	if (_resp.success === true) {
