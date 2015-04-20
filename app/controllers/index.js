@@ -4,12 +4,12 @@ var abx = require('com.alcoapps.actionbarextras');
 var win = $.tabGroup,
     IconicFont = require('IconicFont'),
     fa = new IconicFont({
-		font : 'FontAwesome'
-	});
+	font : 'FontAwesome'
+});
 
 /**
-* @desc: load the actionbarextras module
-*/
+ * @desc: load the actionbarextras module
+ */
 // NOTE: make sure that your window is open
 // before you access the actionbar with abx
 function doOpen(e) {
@@ -18,12 +18,9 @@ function doOpen(e) {
 	// set extras once the Activity is available
 	abx.title = "YourVoice";
 	abx.titleFont = "Chunkfive.otf";
-	abx.titleColor="#840505";
-	abx.subtitle = "Your voice matters a lot.";
-	abx.subtitleFont = "Chunkfive.otf";		
-	abx.subtitleColor="#562A2A";
-	abx.backgroundColor="#F49127";
-	
+	abx.titleColor = "#FFFFFF";
+	abx.backgroundColor = "#EF1A3A";
+
 	if (activity) {
 		activity.onCreateOptionsMenu = function(e) {
 			// aboutBtn and creditsBtn will be displayed in the menu overflow
@@ -31,18 +28,18 @@ function doOpen(e) {
 				title : "About",
 				showAsAction : Ti.Android.SHOW_AS_ACTION_NEVER
 			});
-	 
+
 			aboutBtn.addEventListener("click", function(e) {
 				console.log('Clicked on About');
 			});
-	 
+
 			creditsBtn = e.menu.add({
 				title : "Logout",
 				showAsAction : Ti.Android.SHOW_AS_ACTION_NEVER
 			});
-	 
+
 			creditsBtn.addEventListener("click", function(e) {
-				user.logout(function () {
+				user.logout(function() {
 					$.userNotLoggedInAction();
 				});
 			});
@@ -51,8 +48,8 @@ function doOpen(e) {
 };
 
 /**
-* @desc: authenticated user is logged when the application is closed
-*/
+ * @desc: authenticated user is logged when the application is closed
+ */
 $.userLoggedInAction = function() {
 	user.showMe(function(_response) {
 		if (_response.success === true) {
@@ -67,8 +64,8 @@ $.userLoggedInAction = function() {
 };
 
 /**
-* @desc: on successful login open the tabGroup
-*/
+ * @desc: on successful login open the tabGroup
+ */
 $.loginSuccessAction = function(_options) {
 	Ti.API.info('logged in user information');
 	Ti.API.info(JSON.stringify(_options.model, null, 2));
@@ -93,8 +90,8 @@ $.loginSuccessAction = function(_options) {
 };
 
 /**
-* @desc: unauthenticated user redirect to home
-*/
+ * @desc: unauthenticated user redirect to home
+ */
 $.userNotLoggedInAction = function() {
 	// open the login controller to login the user
 	if (!$.loginController) {
@@ -116,3 +113,41 @@ if (user.authenticated() === true) {
 } else {
 	$.userNotLoggedInAction();
 }
+
+//Load dummy collections data
+$.tabGroup.addEventListener("open", function() {
+	Alloy.Collections.survey.reset([{
+		"question" : "What you feel about ipl 1?",
+		"options" : [{
+			"id" : 1,
+			"value" : "I was not very much impressed because of arious reasons",
+			"poll" : 10
+		}, {
+			"id" : 2,
+			"value" : "bad",
+			"poll" : 4343
+		}],
+	}, {
+		"question" : "What you feel about ipl 2?",
+		"options" : [{
+			"id" : 1,
+			"value" : "I was not very much impressed because of arious reasons",
+			"poll" : 33
+		}, {
+			"id" : 2,
+			"value" : "bad",
+			"poll" : 0
+		}],
+	}, {
+		"question" : "What you feel about ipl 3?",
+		"options" : [{
+			"id" : 1,
+			"value" : "I was not very much impressed because of arious reasons",
+			"poll" : 0
+		}, {
+			"id" : 2,
+			"value" : "bad",
+			"poll" : 0
+		}],
+	}]);
+});

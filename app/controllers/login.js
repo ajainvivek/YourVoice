@@ -64,12 +64,12 @@ function doRegisterBtnClicked() {
 		password : $.acct_password.value,
 		password_confirmation : $.acct_password_confirmation.value,
 	};
-	var user = Alloy.createModel('User);
+	var user = Alloy.createModel('User');
 	user.createAccount(params, userActionResponseHandler);
 };
 
 /**
-* @desc: login into the application with response 
+* @desc: login into the application
 */
 function userActionResponseHandler(_resp) {
 	if (_resp.success === true) {

@@ -1,7 +1,21 @@
 <Alloy>
+	<Collection src="survey" />
 	<Tab title="Recent">
 		<Window title="Recent">
-			<Label>This is a recent tab.</Label>
+			<ScrollableView id="scrollableView" showPagingControl="true" dataCollection="survey" dataTransform="transformFunction">
+				<View layout="vertical">
+					<Label text="{question}" />
+					<TableView data="{options}" scrollable="false"></TableView>
+					<!-- <ListView id="list" sections="{options}" onItemclick="handleClick">
+						<Templates>
+							<ItemTemplate name="custom">
+								<Label bindId="label" left="15"/>
+								<ImageView bindId="icon" right="15" onClick="starClick"/>
+							</ItemTemplate>
+						</Templates>
+					</ListView> -->
+				</View>
+			</ScrollableView>
 		</Window>
 	</Tab>
 </Alloy>
