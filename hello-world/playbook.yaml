@@ -1,0 +1,14 @@
+apiVersion: metaphor.run/v1
+kind: Playbook
+metadata:
+  id: 404ccd74-1656-42b8-bbca-ecbcd69a74ef
+  name: Hello, world
+  description: A one-step playbook that prints a greeting.
+  collectionId: 391ebd0a-bbea-4005-90f5-e4b49078011d
+spec:
+  steps:
+    - id: greet
+      type: code
+      language: shell
+      codeFile: steps/greet.sh
+      description: Print a greeting
